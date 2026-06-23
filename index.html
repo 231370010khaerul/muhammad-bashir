@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengendalian Diri dalam Perspektif Hadis Nabi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f6f9;
+        }
+        header {
+            background-color: #1b5e20;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        select {
+            padding: 8px 12px;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+            max-width: 300px;
+        }
+        iframe {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+    </style>
+    <script>
+        function navigateToPage(selectElement) {
+            const iframe = document.getElementById('content-frame');
+            if (selectElement.value) {
+                iframe.src = selectElement.value;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Studi Tematik: Pengendalian Diri</h1>
+        <div class="nav-container">
+            <label for="menu">Pilih Bab: </label>
+            <select id="menu" onchange="navigateToPage(this)">
+                <option value="cover.html">Halaman Sampul / Utama</option>
+                
+                <optgroup label="Bab I: Pengendalian Emosi & Amarah">
+                    <option value="bab1.html#sub1">a. Kekuatan Sejati dalam Mengendalikan Amarah</option>
+                    <option value="bab1.html#sub2">b. Larangan Marah sebagai Wasiat Nabi</option>
+                    <option value="bab1.html#sub3">c. Keutamaan Menahan Amarah dan Balasannya di Akhirat</option>
+                    <option value="bab1.html#sub4">d. Keutamaan Memaafkan dan Menahan Diri</option>
+                </optgroup>
+
+                <optgroup label="Bab II: Pengendalian Lisan & Ucapan">
+                    <option value="bab2.html#sub1">A. Menjaga Lisan sebagai Cermin Keimanan</option>
+                    <option value="bab2.html#sub2">B. Bahaya Ucapan dan Dampaknya terhadap Akhirat</option>
+                    <option value="bab2.html#sub3">C. Meninggalkan Hal yang Tidak Bermanfaat</option>
+                </optgroup>
+
+                <optgroup label="Bab III: Pengendalian Syahwat & Konsumsi">
+                    <option value="bab3.html#sub1">A. Pengendalian Syahwat melalui Pernikahan & Puasa</option>
+                    <option value="bab3.html#sub2">B. Larangan Berlebih-lebihan</option>
+                    <option value="bab3.html#sub3">C. Menjaga Perut sebagai Bentuk Pengendalian Diri</option>
+                </optgroup>
+
+                <optgroup label="Bab IV: Pengendalian Nafsu & Orientasi Hidup">
+                    <option value="bab4.html#sub1">A. Kecerdasan Hakiki dalam Mengendalikan Nafsu</option>
+                    <option value="bab4.html#sub2">B. Zuhud terhadap Dunia</option>
+                    <option value="bab4.html#sub3">C. Bahaya Ketamakan & Menahan Keinginan Dunia</option>
+                </optgroup>
+
+                <optgroup label="Bab V: Kesabaran & Penguatan Spiritual">
+                    <option value="bab5.html#sub1">A. Kesabaran Sejati saat Menghadapi Ujian Pertama</option>
+                    <option value="bab5.html#sub2">B. Pengendalian Emosi melalui Ibadah Puasa Sunnah</option>
+                </optgroup>
+            </select>
+        </div>
+    </header>
+
+    <iframe id="content-frame" src="cover.html"></iframe>
+
+</body>
+</html>
